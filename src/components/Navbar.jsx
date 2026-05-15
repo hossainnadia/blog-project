@@ -85,7 +85,7 @@ const Navbar = () => {
                             <>
 
                                 {/* User */}
-                                <div className='flex items-center gap-3 bg-gray-100 px-3 py-2 rounded-full'>
+                                <div className='flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-full'>
 
                                     {
                                         user.photoURL ? (
@@ -111,6 +111,11 @@ const Navbar = () => {
                                     Logout
 
                                 </button>
+                                <Link to="/dashboard" className='px-6 block text-center mb-1 bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-full hover:scale-105 duration-300 shadow-md'>
+
+                                    Dashboard
+
+                                </Link>
 
                             </>
 
@@ -208,6 +213,11 @@ const Navbar = () => {
                                         Logout
 
                                     </button>
+                                    <Link to="/dashboard" className='w-full mt-3 block text-center bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl'>
+
+                                        Dashboard
+
+                                    </Link>
 
                                 </div>
 

@@ -11,22 +11,32 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import ProtectedRoute from './pages/ProtectedRoute'
 
+import DashboardLayout from './dashboard/DashboardLayout'
+import DashboardHome from './dashboard/Home'
+import Notification from './dashboard/Notification'
+import Settings from './dashboard/Settings'
 
 const App = () => {
 
     const location = useLocation()
 
-    const hideLayout = location.pathname === "/login"
+    // 👉 Navbar/Footer hide conditions
+    const hideLayout =
+        location.pathname.startsWith("/dashboard") ||
+        location.pathname === "/login"
 
     return (
         <div>
 
+            {/* Navbar (hide for dashboard + login) */}
             {!hideLayout && <Navbar />}
 
             <Routes>
 
+                {/* 🔐 LOGIN */}
                 <Route path="/login" element={<Login />} />
 
+                {/* 🏠 BLOG PAGES (PROTECTED) */}
                 <Route
                     path="/"
                     element={
@@ -59,8 +69,25 @@ const App = () => {
                     }
                 />
 
+                {/* 📊 DASHBOARD ROUTES */}
+                <Route
+                    path="/dashboard"
+                    element={
+                        <ProtectedRoute>
+                            <DashboardLayout />
+                        </ProtectedRoute>
+                    }
+                >
+
+                    <Route index element={<DashboardHome />} />
+                    <Route path="notification" element={<Notification />} />
+                    <Route path="settings" element={<Settings />} />
+
+                </Route>
+
             </Routes>
 
+            {/* Footer (hide for dashboard + login) */}
             {!hideLayout && <Footer />}
 
         </div>
