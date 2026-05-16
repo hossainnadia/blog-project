@@ -11,11 +11,11 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import ProtectedRoute from './pages/ProtectedRoute'
 
-im
 import DashboardLayout from './Dashboard/DashboardLayout'
-import Settings from './dashboard/Settings'
+
 import DashboardHome from './Dashboard/Home'
 import Notifications from './Dashboard/Notifications'
+import Settings from './dashboard/Settings'
 
 const App = () => {
 
