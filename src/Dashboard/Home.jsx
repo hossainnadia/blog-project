@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Home = () => {
+const DashboardHome = () => {
     return (
         <div className="p-6">
 
@@ -43,4 +43,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default DashboardHome

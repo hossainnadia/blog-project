@@ -11,10 +11,11 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import ProtectedRoute from './pages/ProtectedRoute'
 
-import DashboardLayout from './dashboard/DashboardLayout'
-import DashboardHome from './dashboard/Home'
-import Notification from './dashboard/Notification'
+im
+import DashboardLayout from './Dashboard/DashboardLayout'
 import Settings from './dashboard/Settings'
+import DashboardHome from './Dashboard/Home'
+import Notifications from './Dashboard/Notifications'
 
 const App = () => {
 
@@ -80,7 +81,7 @@ const App = () => {
                 >
 
                     <Route index element={<DashboardHome />} />
-                    <Route path="notification" element={<Notification />} />
+                    <Route path="notification" element={<Notifications />} />
                     <Route path="settings" element={<Settings />} />
 
                 </Route>
