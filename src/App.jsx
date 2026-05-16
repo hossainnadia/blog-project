@@ -15,7 +15,7 @@ import DashboardLayout from './Dashboard/DashboardLayout'
 
 import DashboardHome from './Dashboard/Home'
 import Notifications from './Dashboard/Notifications'
-import Settings from './dashboard/Settings'
+import Settings from './Dashboard/Settings'
 
 const App = () => {
 
